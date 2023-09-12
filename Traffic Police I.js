@@ -1,40 +1,18 @@
 // Solution / Решение
-
 var speedError = function (est, act, readings) {
-    // Проверка на отрицательное расстояние
-    if (readings[0][0] <= 0 || readings[1][0] <= 0) {
-        throw new Error("One of the distances in readings array was negative");
-    }
-
-    // Вычисление времени и расстояния
-    var timeDiff = Math.abs(readings[0][1] - readings[1][1]);
-    var estDistDiff = Math.abs(readings[0][0] - readings[1][0]) * est;
-    var actDistDiff = Math.abs(readings[0][0] - readings[1][0]) * act;
-
-    // Вычисление скорости и округление до одного десятичного знака
-    var estSpeed = ((estDistDiff / timeDiff) * 3600 / 1000).toFixed(1);
-    var actSpeed = ((actDistDiff / timeDiff) * 3600 / 1000).toFixed(1);
-
-    return [parseFloat(estSpeed), parseFloat(actSpeed)];
+    // Деструктуризация массива
+    const [[radarDistance1, time1], [radarDistance2, time2]] = readings;
+    // Проверка на отрицательные значения
+    if (radarDistance1 < 0 || radarDistance2 < 0) throw 'error';
+    // Вычисление разницы во времени между измерениями радара.
+    const timeDif = Math.abs(time2 - time1);
+    // Вычисление квадратов оцененного и фактического расстояния.
+    const [distanceSquared1, distanceSquared2, estSquared, actSquared] = [radarDistance1 ** 2, radarDistance2 ** 2, est ** 2, act ** 2];
+    return [
+        Math.round(Math.abs(Math.sqrt(Math.abs(distanceSquared1 - estSquared)) - Math.sqrt(Math.abs(distanceSquared2 - estSquared))) * 36 / timeDif) / 10,
+        Math.round(Math.abs(Math.sqrt(Math.abs(distanceSquared1 - actSquared)) - Math.sqrt(Math.abs(distanceSquared2 - actSquared))) * 36 / timeDif) / 10,
+    ];
 }
-
-function checkReadings(readings) {
-    for (let i = 0; i < readings.length; i++) {
-        if (typeof readings[i][0] !== 'number' || typeof readings[i][1] !== 'number') {
-            throw new Error('Incorrect readings format');
-        }
-    }
-}
-
-var speedError = function (est, act, readings) {
-    checkReadings(readings);
-    var error = 0;
-    for (var i = 0; i < readings.length; i++) {
-        error += Math.
-            abs(act[i] - est[i]);
-    }
-    return error / readings.length;
-};
 
 const Test = require('@codewars/test-compat');
 
