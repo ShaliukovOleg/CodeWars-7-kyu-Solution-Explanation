@@ -1,14 +1,19 @@
 // Solution / Решение
 var speedError = function (est, act, readings) {
     // Деструктуризация массива
-    const [[radarDistance1, time1], [radarDistance2, time2]] = readings;
+    const [[distance1, time1], [distance2, time2]] = readings;
     // Проверка на отрицательные значения
-    if (radarDistance1 < 0 || radarDistance2 < 0) throw 'error';
+    if (distance1 < 0 || distance2 < 0) throw 'error';
     // Вычисление разницы во времени между измерениями радара.
     const timeDif = Math.abs(time2 - time1);
+
+    const squared = (value) => value ** 2;
     // Вычисление квадратов оцененного и фактического расстояния.
-    const [distanceSquared1, distanceSquared2, estSquared, actSquared] = [radarDistance1 ** 2, radarDistance2 ** 2, est ** 2, act ** 2];
+    const [distanceSquared1, distanceSquared2, estSquared, actSquared] = [squared(distance1), squared(distance2), squared(est), squared(act)];
     return [
+        // Возвращаем массив из двух элементов. 
+        // 1 - скорость, с которой по оценке инспектора  дорожного движения, ехал автомобиль
+        // 2 - скорость, с которой автомобиль действительно ехал
         Math.round(Math.abs(Math.sqrt(Math.abs(distanceSquared1 - estSquared)) - Math.sqrt(Math.abs(distanceSquared2 - estSquared))) * 36 / timeDif) / 10,
         Math.round(Math.abs(Math.sqrt(Math.abs(distanceSquared1 - actSquared)) - Math.sqrt(Math.abs(distanceSquared2 - actSquared))) * 36 / timeDif) / 10,
     ];
