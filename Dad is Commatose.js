@@ -12,8 +12,6 @@ Regular expresions
 ^[,]+ поиск одной или более запятых в начале строки
 [,\s]+$ поиск одной или более запятых в конце строки
 
-*/
-/*
 
 Your dad doesn't really get punctuation, 
 and he's always putting extra commas in when he posts. 
