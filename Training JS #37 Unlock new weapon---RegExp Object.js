@@ -36,13 +36,14 @@ function countAnimals(animals, count) {
 // и для каждого животного из массива 'count'
 // считаем количество совпадений в массиве 'animals'
 
-// Version according to the problem condition and using the match method
+// Version according to the problem condition and using the match method / Версия в соответствии с условием задачи и методом подбора
 
 function countAnimals(animals, count) {
     return count.map(animal => (animals.match(new RegExp(animal, "g")) || []).length);
 }
 
 // Tests
+
 console.log(countAnimals("dog,cat", ["dog", "cat"]));   // [1, 1]
 console.log(countAnimals("dog,cat", ["dog", "cat", "pig"]));    // [1, 1, 0]
 console.log(countAnimals("dog,dog,cat", ["dog", "cat"]));   // [2, 1]

@@ -42,6 +42,8 @@ function solve(str) {
     return str.replace(/\S/g, _ => arr.pop()); // берем входящую строку и заменяем все символы (через регулярку) на значения массива 'arr' с конца массива (pop)
 }
 
+// Tests
+
 console.log(solve("codewars")); // srawedoc
 console.log(solve("your code")); // edoc ruoy
 console.log(solve("your code rocks")); // skco redo cruoy

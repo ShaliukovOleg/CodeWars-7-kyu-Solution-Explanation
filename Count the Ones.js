@@ -10,7 +10,7 @@ function hammingWeight(x) {
     return count;
 }
 
-// Short solution
+// Short version
 let hammingWeight = x => x === 0 ? 0 : 1 + hammingWeight(x & (x - 1));
 
 

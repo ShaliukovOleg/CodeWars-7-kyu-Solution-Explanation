@@ -14,7 +14,7 @@ function charConcat(string) {
     return result;
 }
 
-// Short solution
+// Short version
 const charConcat = string => [...string].slice(0, string.length / 2).map((c, i) => c + string[string.length - i - 1] + (i + 1)).join('');
 
 /*

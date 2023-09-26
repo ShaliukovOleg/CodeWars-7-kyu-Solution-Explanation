@@ -19,6 +19,8 @@ var speedError = function (est, act, readings) {
     ];
 }
 
+// Tests
+
 const Test = require('@codewars/test-compat');
 
 describe("Tests", () => {

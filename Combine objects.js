@@ -20,7 +20,7 @@ function combine(...objects) {
     return result;
 }
 
-// Shortest version
+// Short version
 
 const combine = (...objs) => objs.reduce((r, o) => (Object.entries(o).forEach(([k, v]) => r[k] = (r[k] || 0) + v), r), {});
 

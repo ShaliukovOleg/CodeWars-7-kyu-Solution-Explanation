@@ -18,7 +18,10 @@ function leastMove(side) {
 function leastMoveShort(side) {
     return Math.floor((side * (side + 1)) / 6);
 }
-console.log(leastMoveShort(9));
+
+// Tests 
+
+console.log(leastMoveShort(9)); // 15
 
 /*
 

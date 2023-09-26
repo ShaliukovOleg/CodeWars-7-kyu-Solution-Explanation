@@ -13,6 +13,7 @@ function sellingPrice(n, customerQuotation) {
     return customerQuotation[result.indexOf(max)];
 }
 
+// Tests
 
 console.log(sellingPrice(5,[2,8,10,7,8,10,7,8,10,7]));
 

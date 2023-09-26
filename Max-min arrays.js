@@ -24,6 +24,7 @@ function solve(arr) {
 const solve = arr =>
     [...Array(arr.sort((a, b) => a - b).length)].map((_, index) => index % 2 ? arr.shift() : arr.pop());
 
+// Tests
 
 console.log(solve([15, 11, 10, 7, 12]));
 console.log(solve([52, 77, 72, 44, 74, 76, 40]));

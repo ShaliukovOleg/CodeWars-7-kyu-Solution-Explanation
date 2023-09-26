@@ -4,7 +4,6 @@ function circleArea(radius) {
     return (Math.PI * radius * radius); // подсчет согласно формуле площади круга
 }
 
-
 /*
 
 Complete the function which will return the area of a circle with the given radius.
