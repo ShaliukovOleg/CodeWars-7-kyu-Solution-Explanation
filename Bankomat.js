@@ -44,6 +44,11 @@ function solve(n) {
     return remaining === 0 ? count : -1;
 }
 
+// Version 2 (Shortest solution)
+
+const solve = n =>
+    (n % 10) ? -1 : [500, 200, 100, 50, 20, 10].reduce((pre, val) => (pre += n / val ^ 0, n %= val, pre), 0);
+
 /*
 
 An ATM has banknotes of nominal values 10, 20, 50, 100, 200 and 500 dollars. 
