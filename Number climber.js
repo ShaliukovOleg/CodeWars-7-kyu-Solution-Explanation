@@ -13,6 +13,12 @@ function climb(n) {
     return sequence.reverse(); // вернуть последовательность в правильном порядке
 }
 
+// Short version
+
+function climb(n) {
+    return [...n.toString(2)].map((_, idx, arr) => n >> arr.length - ++idx);
+}
+
 // Tests
 
 console.log(climb(1));   // [1]
