@@ -2,29 +2,14 @@
 
 function carD([left, right], pos) {
     switch (true) {
-        case [...left].some((c, i) => "\\/".includes(c) && "\\/".includes(right[i])):
-            return "Super Smash!";
-
-        case left.includes("["):
-            return "Free Lambo on Left!";
-
-        case right.includes("]"):
-            return "Free Lambo on Right!";
-
-        case left.substr(pos, 3).includes("\\"):
-            return 'Crash, Bang, Ouch!';
-
-        case right.substr(pos, 3).includes("\\"):
-            return 'Right Smash!';
-
-        case left.substr(pos, 2).includes("/"):
-            return 'Knocked Off, Dust Yourself Down.';
-
-        case right.substr(pos, 2).includes("/"):
-            return 'Dammit!';
-
-        default:
-            return "Plain Sailing!";
+        case [...left].some((c, i) => "\\/".includes(c) && "\\/".includes(right[i])): return "Super Smash!"; // Проверка на наличие открытых дверей в обоих рядах машин.
+        case left.includes("["): return "Free Lambo on Left!"; // Проверка на наличие Lamborghini слева.
+        case right.includes("]"): return "Free Lambo on Right!"; // Проверка на наличие Lamborghini справа.
+        case left.substr(pos, 3).includes("\\"): return 'Crash, Bang, Ouch!'; // Проверка на наличие открытых дверей слева.
+        case right.substr(pos, 3).includes("\\"): return 'Right Smash!'; // Проверка на наличие открытых дверей справа.
+        case left.substr(pos, 2).includes("/"): return 'Knocked Off, Dust Yourself Down.'; // Проверка на наличие открытых дверей слева.
+        case right.substr(pos, 2).includes("/"): return 'Dammit!'; // Проверка на наличие открытых дверей справа.
+        default: return "Plain Sailing!"; // Если ничего не соответствует вышеперечисленным случаям, возвращаем "Plain Sailing!".
     }
 }
 
