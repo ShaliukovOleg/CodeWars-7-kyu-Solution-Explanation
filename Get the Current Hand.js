@@ -31,12 +31,6 @@ function getCurrentHand(arr) {
 
 const getCurrentHand = (a) => a.reduce((hand, card) => !a.slice(-4).includes(card) && !hand.includes(card) ? [...hand, card] : hand, []).slice(0, 4);
 
-// Tests
-
-console.log()
-console.log()
-console.log()
-
 /*
 
 
