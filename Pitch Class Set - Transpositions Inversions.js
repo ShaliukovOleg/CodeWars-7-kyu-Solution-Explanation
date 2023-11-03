@@ -30,9 +30,10 @@ function operate(pcSet, operation) {
 
 function operate(pcSet, op) {
     const n = parseInt(op.replace(/\D/g, ''), 10);
-    return op.includes('I')
-        ? [...pcSet.map(element => (12 - element + n) % 12).sort((a, b) => a - b)]
-        : [...pcSet.map(element => (element + n) % 12).sort((a, b) => a - b)];
+    const result = op.includes('I')
+        ? [...pcSet.map(element => (12 - element + n) % 12)]
+        : [...pcSet.map(element => (element + n) % 12)];
+    return result.sort((a, b) => a - b);
 }
 
 // Tests
