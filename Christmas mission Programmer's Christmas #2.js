@@ -1,13 +1,26 @@
 // Solution / Решение
 
 function merryChristmas(s1, s2) {
-    const s2Chars = s2.split(''); // преобразуем строку 2 в массив
-    s2Chars.forEach(elem => s1 = s1.includes(elem) ? s1.replace(elem, "") : s1 + elem); // проверяем и заменяем каждый элемент второго массива в первой строке
+    [...s2].forEach(elem => s1 = s1.includes(elem)
+        ? s1.replace(elem, "")
+        : s1 + elem); // проверяем и заменяем каждый элемент второго массива в первой строке
+    return [...s1].sort().join`` === ' !CMaehimrrrssty' // сравниваем два полученных массива на соответствие.
+}
 
-    const s1Chars = s1.split(''); // преобразуем полученную строку 1 в массив
-    const checkStr = [...'Merry Christmas!']; // преобразуем в массив строку согласно условию
+// Solution 2 / Решение 2
 
-    return s1Chars.sort().join`` === checkStr.sort().join`` // сравниваем два полученных массива на соответствие.
+function merryChristmas(s1, s2) {
+    const charCount = {}; // Объект для отслеживания количества символов в строке s1.
+    for (const ch of s1) { charCount[ch] = (charCount[ch] || 0) + 1; } // Заполняем объект charCount, подсчитывая количество каждого символа в строке s1.
+    for (const ch of s2) { charCount[ch] ? charCount[ch]-- : charCount[ch] = 1; } // Уменьшаем счетчик символов объекта charCount, используя символы из строки s2.
+    for (const ch of "Merry Christmas!") { // Проверяем, можно ли из символов строки s1 получить строку "Merry Christmas!".
+        if (charCount[ch]) {
+            charCount[ch]--;
+        } else {
+            return false;
+        } // Если символ ch не присутствует в достаточном количестве, возвращаем false.
+    }
+    return Object.values(charCount).every(a => !a); // Проверяем, что все символы в объекте charCount имеют нулевое количество.
 }
 
 // Tests
