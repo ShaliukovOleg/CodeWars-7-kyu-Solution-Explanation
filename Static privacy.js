@@ -49,8 +49,7 @@ class Class {
 }
 Class.foo; // 42
 
-However, when I create a class Subclass that inherits from Class, 
-the code breaks:
+However, when I create a class Subclass that inherits from Class, the code breaks:
 
 class Subclass extends Class {}
 Subclass.foo; // Error !
