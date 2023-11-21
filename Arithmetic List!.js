@@ -3,7 +3,7 @@
 var seqlist = function (first, c, l) {
     const result = []; // создаем массив для результата
 
-    while (result.length < l) { 
+    while (result.length < l) {
         // цикл выполняется, пока количество элементов в массиве не станет
         // больше необходимого количества терминов, которое нужно вернуть
         result.push(first); // добавляем значение в результирующий массив
@@ -13,10 +13,14 @@ var seqlist = function (first, c, l) {
     return result; // возвращаем результат
 }
 
+// Short version
+
+const seqlist = (first, c, l) => Array.from({ length: l }, (_, i) => first + i * c);
+
 // Tests
 
-console.log(seqlist(0,1,20)); // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
-console.log(seqlist(5,2,5)); // [ 5, 7, 9, 11, 13 ]
+console.log(seqlist(0, 1, 20)); // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+console.log(seqlist(5, 2, 5)); // [ 5, 7, 9, 11, 13 ]
 
 /*
 
