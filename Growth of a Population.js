@@ -9,11 +9,20 @@ function nbYear(p0, percent, aug, p) {
     return year; // возврат результата
 }
 
-// Or
+// Solution 2 / Решение 2
 
 function nbYear(p0, percent, aug, p) {
     let year = 0;
-    while (p0 < p) p0 += Math.floor(p0 * percent / 100 + aug), year++;
+    while (p0 < p) p0 += p0 * percent / 100 + aug  | 0, year++;
+    return year;
+}
+
+// Solution 3 / Решение 3
+
+function nbYear(p0, percent, aug, p) {
+    for (let year = 0; p0 < p; year++) {
+        p0 += p0 * percent / 100 + aug | 0
+    }
     return year;
 }
 
