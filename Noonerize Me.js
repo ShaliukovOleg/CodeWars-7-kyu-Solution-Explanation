@@ -16,9 +16,9 @@ const noonerize = numbers =>
 
 // Tests
 
-console.log(noonerize([12, 34])); 18
-console.log(noonerize([1000000, 9999999])); 7000001
-console.log(noonerize([55, 98])); 37
+console.log(noonerize([12, 34])); // 18
+console.log(noonerize([1000000, 9999999])); // 7000001
+console.log(noonerize([55, 98])); // 37
 
 /*
 
