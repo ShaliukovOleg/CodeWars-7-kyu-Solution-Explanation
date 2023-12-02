@@ -13,6 +13,21 @@ function isLeapYear(year) {
     }
 }
 
+// Or
+
+function isLeapYear(year) {
+    switch (true) { // проверяем через конструкцию switch true, от большего к меньшему согласно кратности
+        case !(year % 400): // проверка года кратного 400
+            return true;
+        case !(year % 100): // проверка года кратного 100
+            return false;
+        case !(year % 4): // проверка года кратного 4
+            return true;
+        default:
+            return false;
+    }
+}
+
 // Short version / Короткая версия
 
 const isLeapYear = year => year % 400 === 0 || year % 100 !== 0 && year % 4 === 0;
