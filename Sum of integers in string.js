@@ -22,9 +22,9 @@ const sumOfIntegersInString = s => s.split(/\D/).reduce((a, n) => a + +n, 0);
 
 // Tests
 
-console.log(sumOfIntegersInString('The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog'));
-console.log(sumOfIntegersInString('Fx1203jumps914ov3r1349the102l4zy'));
-console.log(sumOfIntegersInString('The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog'));
+console.log(sumOfIntegersInString('The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog')); // 3635
+console.log(sumOfIntegersInString('Fx1203jumps914ov3r1349the102l4zy')); // 3575
+console.log(sumOfIntegersInString('Nan462omach585inesSonRunAw123ayLitt511leB******')); // 1681
 
 /*
 
