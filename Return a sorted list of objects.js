@@ -1,7 +1,9 @@
 // Solution / Решение
 
 function sortList(sortBy, list) {
-    return list.sort((a, b) => b[sortBy] - a[sortBy]);
+    return list.sort((a, b) => b[sortBy] - a[sortBy]); 
+    // сортируем элементы массива в порядке убывания 
+    // с объектами на основе значения указанного свойства
 }
 
 // Short version
