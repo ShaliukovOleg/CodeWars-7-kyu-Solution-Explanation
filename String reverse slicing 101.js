@@ -25,7 +25,7 @@ function reverseSlice(str) {
 function reverseSlice(str) {
     return Array.from( // создаем массив, передаем в него два аргумента
         { length: str.length }, // длина создаваемого массива
-        (_, i) => str.slice(0, str.length - i).split('').reverse().join('') // callback-функция, которая вызывается для каждого индекса от нуля до str.length
+        (_, i) => str.split('').reverse().join('').slice(i) // callback-функция, которая вызывается для каждого индекса от нуля до str.length
     );
 }
 
