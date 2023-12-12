@@ -30,12 +30,20 @@ console.log(oddNotPrime(1)); // 1
 
 /*
 
-Description
+For "x", determine how many positive integers less than or equal to "x" are odd but not prime. 
+Assume "x" is an integer between 1 and 10000.
+
+Example: 5 has three odd numbers (1,3,5) and only the number 1 is not prime, so the answer is 1
+Example: 10 has five odd numbers (1,3,5,7,9) and only 1 and 9 are not prime, so the answer is 2
 
 */
 
 /*
 
-Description
+Для числа "x" определите, сколько целых положительных чисел, меньших или равных "x", являются нечетными, но не простыми. 
+Предположим, что "x" - это целое число от 1 до 10000.
+
+Пример: 5 состоит из трех нечетных чисел (1,3,5), и только число 1 не является простым, поэтому ответ равен 1.
+Пример: 10 состоит из пяти нечетных чисел (1,3,5,7,9), и только 1 и 9 не являются простыми, поэтому ответ равен 2.
 
 */
