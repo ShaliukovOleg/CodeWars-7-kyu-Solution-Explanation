@@ -11,7 +11,7 @@ function checkConcatenatedSum(num, n) {
 // Short version
 
 const checkConcatenatedSum = (num, n) =>
-    [...`${Math.abs(num)}`].reduce((pre, val) => pre + Math.sign(num) * val.repeat(n), 0) === num;
+    [...`${Math.abs(num)}`].reduce((acc, elem) => acc + Math.sign(num) * elem.repeat(n), 0) === num;
 
 // Tests
 
