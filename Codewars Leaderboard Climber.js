@@ -5,12 +5,21 @@ function leaderB(user, user_score, your_score) {
     const x = Math.floor(diffScore / 3)
     const y = diffScore - x * 3
     const kataCount = (x, y) => x + y > 1000 ? ' Dammit!' : '';
-    return diffScore < 0 
-        ? `Winning!` 
-        : diffScore === 0 
-        ? `Only need one!`
-        : `To beat ${user}'s score, I must complete ${x} Beta kata and ${y} 8kyu kata.${kataCount(x, y)}`
+    return diffScore < 0
+        ? `Winning!`
+        : diffScore === 0
+            ? `Only need one!`
+            : `To beat ${user}'s score, I must complete ${x} Beta kata and ${y} 8kyu kata.${kataCount(x, y)}`
 }
+
+// Short version
+
+const leaderB = (user, user_score, your_score) => {
+    const diffScore = user_score - your_score;
+    const [x, y] = [Math.floor(diffScore / 3), diffScore - Math.floor(diffScore / 3) * 3];
+    const kataCount = (x, y) => (x + y > 1000 ? ' Dammit!' : '');
+    return diffScore < 0 ? 'Winning!' : diffScore === 0 ? 'Only need one!' : `To beat ${user}'s score, I must complete ${x} Beta kata and ${y} 8kyu kata.${kataCount(x, y)}`;
+};
 
 // Tests
 
