@@ -1,18 +1,17 @@
 // Solution / Решение
 
 // Метод 'some' возвращает true, если хоть один из элементов вернет true
-const or = (a, b) => [a, b].some(elem => Boolean(elem)); 
+function or(a, b) { return [a, b].some(elem => Boolean(elem)) };
 
 // Мы возвращаем true при сравнении отфильтрованных 'Boolean' элементов
-const xor = (a, b) => [a, b].filter(Boolean).length === 1; 
+function or(a, b) { return [a, b].filter(Boolean).length === 1 };
 
 // Solution 2 / Решение 2
 
 // последовательное сравнение элементов с true при помощи тернарного оператора
-const or = (a, b) => a ? true : b ? true : false; 
-
+function or(a, b) { return a ? true : b ? true : false };
 // вызываем функцию проверки исходя из функции 'or', и двух условий когда, или 'a' true или 'b'
-const xor = (a, b) => or(a, b) && or(!a, !b);
+function xor(a, b) { return or(a, b) && or(!a, !b) };
 
 // Short version
 
