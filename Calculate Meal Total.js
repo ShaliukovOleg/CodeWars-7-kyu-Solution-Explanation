@@ -26,6 +26,10 @@ function calculate_total(subtotal, tax, tip) {
 
 const calculate_total = (subtotal, tax, tip) => +(subtotal * (1 + tax / 100 + tip / 100)).toFixed(2);
 
+// Or
+
+const calculate_total = (subtotal, tax, tip) => Math.round(subtotal * (100 + tax + tip)) / 100;
+
 // Tests
 
 console.log(calculate_total(0.00, 6, 18)); // 0
