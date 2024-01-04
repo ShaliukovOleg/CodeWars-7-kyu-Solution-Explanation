@@ -62,11 +62,11 @@ This kata is a piece of Binary Genetic Algorithm
 повторите попытку.
 
 Смотрите другие ката из этой серии
-Серия генетических алгоритмов - #1 Генерация
-Серия генетических алгоритмов - #2 Мутация
-Серия генетических алгоритмов - #3 Кроссинговер
-Серия генетических алгоритмов - #4 Получение популяции и фитнессов
-Серия генетических алгоритмов - #5 Выбор колеса рулетки
+Genetic Algorithm Series - #1 Generate
+Genetic Algorithm Series - #2 Mutation
+Genetic Algorithm Series - #3 Crossover
+Genetic Algorithm Series - #4 Get population and fitnesses
+Genetic Algorithm Series - #5 Roulette wheel selection
 
 Это ката является частью бинарного генетического алгоритма
 
