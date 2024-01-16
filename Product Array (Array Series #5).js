@@ -1,8 +1,17 @@
 // Solution / Решение
 
 function productArray(numbers) {
-    return numbers.map(x => numbers.reduce((a, b) => a * b) / x)
+    const result = []; // Массив для результата
+    const sumNumbers = numbers.reduce((a, b) => a * b) // Сумма элементов исходного массива
+    for (let i = 0; i < numbers.length; i++) { // Итерация согласно размеру переданного аргументом массива
+        result.push(sumNumbers / numbers[i]) // При каждой итерации мы добавляем в результирующий массив сумму элементов разделенный на текущий элемент итерации
+    }
+    return result; // Возвращаем конечный результат
 }
+
+// Short version
+
+const productArray = numbers => numbers.map(x => numbers.reduce((a, b) => a * b) / x);
 
 // Tests
 
