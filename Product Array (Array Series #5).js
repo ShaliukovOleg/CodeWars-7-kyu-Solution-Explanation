@@ -13,6 +13,10 @@ function productArray(numbers) {
 
 const productArray = numbers => numbers.map(x => numbers.reduce((a, b) => a * b) / x);
 
+// Or 
+
+const productArray = numbers => numbers.reduce((acc, _, i, arr) => (acc.push(arr.reduce((a, b) => a * b) / arr[i]), acc), []);
+
 // Tests
 
 console.log(productArray([10, 12, 12])); // [ 144, 120, 120 ]
