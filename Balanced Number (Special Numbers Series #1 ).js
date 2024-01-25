@@ -5,12 +5,12 @@ function balancedNum(number) {
   const length = strNum.length; // Получение длины строки
   if (length <= 2) return "Balanced"; // Если строка состоит из 2 символов или менее, считается сбалансированной
 
-  const leftside = strNum.slice(0, Math.floor((length - 1) / 2)); // Получение левой части строки (без среднего символа, если строка имеет нечетную длину)
-  const rightside = strNum.slice(Math.ceil((length + 1) / 2)); // Получение правой части строки (без среднего символа, если строка имеет нечетную длину)
+  const leftNums = strNum.slice(0, Math.floor((length - 1) / 2)); // Получение левой части строки (без среднего символа, если строка имеет нечетную длину)
+  const rightNums = strNum.slice(Math.ceil((length + 1) / 2)); // Получение правой части строки (без среднего символа, если строка имеет нечетную длину)
   const sum = (str) =>
     str.split("").reduce((a, b) => parseInt(a) + parseInt(b), 0); // Функция для вычисления суммы цифр в строке
 
-  return sum(leftside) === sum(rightside) ? "Balanced" : "Not Balanced"; // Сравнение сумм левой и правой частей для определения сбалансированности строки
+  return sum(leftNums) === sum(rightNums) ? "Balanced" : "Not Balanced"; // Сравнение сумм левой и правой частей для определения сбалансированности строки
 }
 
 // Tests
