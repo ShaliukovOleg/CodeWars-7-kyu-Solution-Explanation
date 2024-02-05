@@ -1,14 +1,25 @@
 // Solution / Решение
 
-function testFunc() {
-
+// Определение класса Node для представления узла связанного списка
+class Node {
+  // Конструктор класса Node принимает данные узла и ссылку на следующий узел
+  constructor(data, next) {
+    this.data = data; // Свойство для хранения данных узла
+    this.next = next; // Свойство для хранения ссылки на следующий узел
+  }
 }
+
+const push = (head, data) => new Node(data, head); // Функция push используется для добавления нового узла с данными в начало связанного списка
+
+const buildOneTwoThree = () => // Функция buildOneTwoThree создает связанный список с тремя узлами: 1, 2 и 3
+  [3, 2, 1].reduce((acc, val) => push(acc, val), null); // Массив [3, 2, 1] используется для последовательного добавления узлов
+    // в связанный список с помощью функции push
 
 // Tests
 
-console.log()
-console.log()
-console.log()
+console.log();
+console.log();
+console.log();
 
 /*
 

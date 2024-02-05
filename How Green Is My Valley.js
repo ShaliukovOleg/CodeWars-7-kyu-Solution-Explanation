@@ -42,10 +42,7 @@ function makeValley(arr) {
   arr
     .sort((a, b) => b - a) // Сортировка входящего массива
     .forEach(
-      (
-        val,
-        idx // Перебор элементов массива по их индексу и разбивка его в две противоположные стороны
-      ) =>
+      (val,idx) => // Перебор элементов массива по их индексу и разбивка его в две противоположные стороны
         idx % 2 === 0
           ? leftWing.push(val) // Добавление элемента в конец левой части массива
           : rightWing.unshift(val) // Добавление элемента в начало правой части массива
@@ -71,7 +68,6 @@ each integer l of the left wing must be greater or equal to its counterpart r in
 In other words the right wing must be nearly as steep as the left wing.
 
 The function is make_valley or makeValley or make-valley.
-
 a = [79, 35, 54, 19, 35, 25]
 make_valley(a) --> [79, 35, 25, *19*, 35, 54]
 The bottom is 19, left wing is [79, 35, 25], right wing is [*19*, 35, 54].
