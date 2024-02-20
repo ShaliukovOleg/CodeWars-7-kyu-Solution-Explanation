@@ -20,6 +20,28 @@ function innerSquare(rect, center, side) {
     return result; // Возвращаем результат
 }
 
+// Reduce method
+
+function innerSquare(rect, center, side) {
+    const centerY = rect.findIndex(row => row.includes(center));
+    const centerX = rect[centerY].indexOf(center);
+    const spread = Math.floor((side - 1) / 2);
+    let currentRow = centerY - spread;
+
+    // Используем reduce для построения квадрата
+    const result = Array.from({ length: side }).reduce((acc, _, i) => {
+        const currentRowIndex = rect[currentRow + i];
+        if (currentRowIndex) {
+            acc.push(currentRowIndex.slice(
+                Math.max(centerX - spread, 0),
+                Math.min(centerX + spread + 1, currentRowIndex.length)
+            ));
+        }
+        return acc;
+    }, []);
+
+    return result;
+}
 
 // Tests
 
