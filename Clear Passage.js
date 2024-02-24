@@ -9,6 +9,10 @@ function rotate(rows) {
         ));
 }
 
+// Short version
+
+const rotate = rows => rows.map(row => row.indexOf('.'));
+
 // Tests
 
 const act = ([
