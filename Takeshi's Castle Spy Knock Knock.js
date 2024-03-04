@@ -12,8 +12,6 @@ function knockKnock(str) {
     return result; // Возвращаем строку с символами
 }
 
-
-
 // Tests
 
 console.log(knockKnock("vkxn kuxsrh adpvi vdbasjoj ypoi axwwe")); // !k^vo^
