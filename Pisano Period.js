@@ -29,6 +29,7 @@ Defined by the recurrence relation
   Fib(1) = 1
   Fib(2) = 1
   Fib(i) = Fib(i-1) + Fib(i-2)
+  
 
 For any integer n, the sequence of Fibonacci numbers Fib(i) taken modulo n is periodic. 
 The Pisano period, denoted Pisano(n), is the length of the period of this sequence.
