@@ -56,4 +56,6 @@ find out the area of the lune AGFHA (the shaded area).
 Учитывая радиус полукруга ADBCA,
 узнать площадь луны AGFHA (заштрихованная область).
 
+
+
 */
