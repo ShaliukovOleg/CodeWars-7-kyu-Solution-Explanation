@@ -21,6 +21,7 @@ The ancient Inca people interpreted the deep red coloring as a jaguar attacking 
 But who believes in Inca myths these days? 
 So, Alan decides to prove to her mom that there is no jaguar. How? 
 Well, only little Alan knows that. 
+
 For now, he needs a small help from you. 
 Help him solve the following calculations so that he gets enough time to prove it before the eclipse starts.
 
